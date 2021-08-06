@@ -8,7 +8,9 @@
 
 body {
   font-size: "Fira Sans Extra Condensed", sans-serif;
-  background-color: rgba(180, 215, 255, 0.651); }
+  background-color: rgba(180, 215, 255, 0.651);
+  width: 100%;
+  height: 100%; }
 
 header {
   width: 100%;
@@ -24,9 +26,10 @@ header {
 header .logo {
   color: white;
   font-size: 30px;
-  line-height: 80px;
+  line-height: 100px;
   flex-direction: row;
-  float: left; }
+  float: left;
+  justify-content: center; }
 
 /*botones del lado derecho*/
 header nav {
@@ -46,7 +49,7 @@ main {
   margin: auto; }
 
 /*para centrar*/
-.wrapper, .administrativo, .impositivo, .contable, .laboral, .capacitaciones, .auditoria {
+.wrapper {
   width: 100%;
   max-width: 1000px;
   margin: auto;
@@ -80,7 +83,7 @@ ul {
 
 /*contenido dentro del video*/
 .textoIndex h1 {
-  font-family: 'Petit Formal Script', cursive;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
   background: rgba(47, 113, 255, 0.658);
   width: 100%;
   text-align: center; }
@@ -91,17 +94,11 @@ ul {
   width: 100%;
   text-align: center; }
 
-.btn {
+.textoIndex h3 {
   font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-size: 15px;
   background: rgba(47, 113, 255, 0.658);
-  color: black;
-  display: inline-block;
-  padding: 10px;
-  text-align: center;
-  width: 100px;
-  text-decoration: none;
-  line-height: normal; }
+  width: 100%;
+  text-align: center; }
 
 /*carrusel index*/
 .container-fluid {
@@ -109,13 +106,10 @@ ul {
   padding: 0; }
 
 /*modificar después*/
-@media (max-width: 600px) {
-  .container-fluid {
-    background-color: red; } }
-
 @media (min-width: 600px) and (max-width: 1024px) {
-  .container-fluid {
-    background-color: green; } }
+  .contact-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr; } }
 
 /*video*/
 .videoIndex {
@@ -238,23 +232,79 @@ ul {
   background-color: #ffbf83;
   height: 100%; }
 
-/*para el grid contacto*/
-.gridContacto {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50px 275px 275px;
-  grid-template-areas: "titulo titulo" "contactoUno contactoDos" "contactoTres contactoDos";
-  justify-items: stretch;
-  align-items: center;
-  box-sizing: border-box; }
+/*para contacto*/
+.content {
+  max-width: 100%;
+  max-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px; }
 
-.datos {
-  grid-area: contactoUno;
-  text-align: center; }
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(33, 3, 145, 0.3);
+  height: 500px; }
+
+.contact-form {
+  opacity: 80%; }
+  .contact-form form {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    max-height: 600px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70px 70px 70px 50px 120px 30px 70px;
+    grid-template-areas: "nombre nuestrosDatos" "email nuestrosDatos" "telefono nuestrosDatos" "tipo imagenContacto" "consulta imagenContacto" "novedades imagenContacto" "botones imagenContacto";
+    text-align: center; }
+  .contact-form form label {
+    display: block; }
+  .contact-form form button,
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 50%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: black;
+    border-bottom: 1px solid #1800a3ef; }
+
+.nombre {
+  grid-area: nombre; }
+
+.email {
+  grid-area: email; }
+
+.telefono {
+  grid-area: telefono; }
+
+.tipo {
+  grid-area: tipo; }
+
+.consulta {
+  grid-area: consulta; }
+
+.checkbox {
+  grid-area: novedades; }
+
+.botones {
+  grid-area: botones; }
+
+.nuestrosDatos {
+  grid-area: nuestrosDatos;
+  background: rgba(180, 215, 255, 0.651); }
+
+.infoMail {
+  grid-area: infoMail;
+  background: rgba(180, 215, 255, 0.651); }
+
+.infoTel {
+  grid-area: infotel;
+  background: rgba(180, 215, 255, 0.651); }
 
 .imagenContacto {
-  grid-area: contactoTres;
-  text-align: center; }
-
-.formulario {
-  grid-area: contactoDos; }
+  grid-area: imagenContacto;
+  background: rgba(180, 215, 255, 0.651); }

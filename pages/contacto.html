@@ -22,8 +22,6 @@
     <meta property= "og: image" content="pages/img/S&K Asesoramiento.png">
     <meta property= "og: url" content="https://estudiocontablesyk.com.ar">
     <meta property= "og: locale" content="es_ES">
-<!--css bootstrap-->
-    <link rel="stylesheet" href="pages/css/bootstrap.min.css">
 <!--css estilos-->
     <link rel="stylesheet" href="css/style.css"> 
 <!--fuentes-->
@@ -33,10 +31,10 @@
 <body>
     <header>
         <div class="wrapper">
-            <a href="file:///c:/Users/User/Desktop/Coder/DW 16600/proyecto/index.html" class="logo"><img src="img/S&K Asesoramiento - Logo.png" alt="S & K"/></a>
-            <div class="logo"><h2>Estudio contable</h2></div>
+            <a href="C:\Users\User\Desktop\Coder\DW 16600\proyecto\index.html" class="logo"><img src="img/S&K Asesoramiento - Logo.png" alt="S & K"/></a>
+            <div class="logo"><h4>Estudio contable</h4></div>
             <nav><ul class="menu">
-                <li><a href="file:///c:/Users/User/Desktop/Coder/DW 16600/proyecto/index.html" class="button">HOME</a></li>
+                <li><a href="C:\Users\User\Desktop\Coder\DW 16600\proyecto\index.html" class="button">HOME</a></li>
                 <li><a href="estudio.html" class="button">ESTUDIO</a></li>
                 <li><a href="servicios.html" class="button">SERVICIOS</a></li>
                 <li><a href="novedades.html" class="button">NOVEDADES</a></li>
@@ -45,62 +43,61 @@
         </div>
     </header>
     <main>
-        <div class="gridContacto">
-            <div class="titulo"><h2>CONTACTO</h2></div>
-            <div class="datos">
-                <img src="img/iconcorreo.png" alt="Ícono de correo">
-                <span>estudiocontable@correo.com</span>
-                <br><br>
-                <img src="img/iconwhatsapp.png" alt="Ícono de correo">
-                <span>+54 11 6693 9513</span>
-                <br><br>
-            </div>
-            <div class="imagenContacto"><img src="img/asesoramientocontable.jpg" alt="asesoramientocontable"></div>
-            <div class="formulario">
-                <form role="form">
-                        <legend><h2>CONSULTA</h2></legend>
-                        <label>Nombre y Apellido</label>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="Nombre y Apellido" placeholder="Ingrese su nombre">
-                    </div>
-                        <br>
-                        <label>Email</label>
-                    <div class="form-group">
-                        <input type="email" name="Email" placeholder="Ingrese su correo">
-                    </div>
-                        <br>
-                        <label>Teléfono</label>
-                    <div class="form-group">
-                        <input type="tel" name="Teléfono" placeholder="Ingrese su número">
-                    </div>
-                        <br>
-                        <label>Tipo de contribuyente</label>
-                    <div class="form-group">
-                        <select name="Tipo de contribuyente">
-                            <option value="RG">Régimen general</option>
-                            <option value="M">Monotributista</option>
-                            <option value="FC">Futuro contribuyente</option>
-                            <option value="O">Otro</option>
-                        </select>
-                    </div>
-                        <br>
-                    <div class="form-group">
-                        <label>Tu consulta</label>
-                        <br>
-                        <textarea rows="10" placeholder="Escribí tu comentario"></textarea>
-                    </div>
-                    <div class="checkbox">
-                            <div>Deseo recibir novedades
-                        <input type="checkbox" name="Acepta" value="1"/>
+        <div class="content">
+                <div class="contact-wrapper">
+                <div class="contact-form">
+                    <form role="form">
+                        <p>
+                            <div class="nombre"><label>Nombre y Apellido</label>
+                            <input type="text" class="form-control" name="Nombre y Apellido" placeholder="Ingrese su nombre"></div>
+                        </p>
+                        <p>
+                            <div class="email"><label>Email</label>
+                            <input type="email" name="Email" placeholder="Ingrese su correo"></div>
+                        </p>
+                        <p>
+                            <div class="telefono"><label>Teléfono</label>
+                            <input type="tel" name="Teléfono" placeholder="Ingrese su número"></div>
+                        </p>
+                        <p>
+                            <div class="tipo"><label>Tipo de contribuyente</label>
+                                <select name="Tipo de contribuyente">
+                                    <option value="RG">Régimen general</option>
+                                    <option value="M">Monotributista</option>
+                                    <option value="FC">Futuro contribuyente</option>
+                                    <option value="O">Otro</option>
+                                </select></div>
+                        </p>
+                        <p>
+                            <div class="consulta"><label>Tu consulta</label>
+                            <textarea rows="4" placeholder="Escribí tu comentario"></textarea></div>
+                        </p>
+                        <p>
+                            <div class="checkbox">
+                                <div>Deseo recibir novedades<input type="checkbox" name="Acepta" value="1"/></div>
                             </div>
-                    </div>
+                        </p>
+                        <p>
+                            <div class="botones">
+                            <input type="submit" value="Enviar"/>
+                            <input type="reset" value="Limpiar datos"/></div>
+                        </p>
+                    <div class="nuestrosDatos"><h4>Nuestros datos</h4>
                         <br>
-                        <input type="reset" value="Limpiar datos"/>
-                        <input type="submit" value="Enviar"/>
+                    <ul>
+                        <li><img src="img/iconcorreo.png" alt="Ícono de correo"></li>
+                        <label>info@syk.com.ar</label>
+                    <br><br>
+                        <li><img src="img/iconwhatsapp.png" alt="Ícono de correo"></li>
+                        <label>+54 11 6693 9513</label>
+                    </div>
+                    <br><br>
+                    </ul>
+                    <div class="imagenContacto"><img src="img/asesoramientocontable.jpg" alt="asesoramientocontable"></div>  
+                </form>
                 </div>
-                </form>               
             </div>
-        </div>    
+        </div>  
     </main>
 <!--contacto por whatsapp-->
     <a href="#" class="contactoWp" target="_blank"><img src="img/whatsapp.png" alt=iconWhatsapp></a>   

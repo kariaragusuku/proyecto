@@ -110,18 +110,6 @@ ul{
             text-align: center;
         }
 }       
-.btn{
-    font-family: $base-font-family;
-    font-size: $button-font-size;
-    background: $texto-background;
-    color: rgb(0, 0, 0);
-    display: inline-block;
-    padding: 10px;
-    text-align: center;
-    width: 100px;
-    text-decoration: none;
-    line-height: normal;    
-}
 /*carrusel index*/
 .container-fluid{
     margin: 0;
@@ -129,13 +117,12 @@ ul{
 }
 /*modificar después*/
 @media (max-width: 600px){
-    .container-fluid{
-        background-color: red;
-    }
+
 }
 @media (min-width: 600px) and (max-width: 1024px){
-    .container-fluid{
-        background-color:green;
+    .contact-form{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
     }
 }
 /*video*/
@@ -265,27 +252,90 @@ ul{
     background-color: #ffbf83;
     height: 100%; 
 }
-/*para el grid contacto*/
-.gridContacto{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50px 275px 275px;    
-    grid-template-areas: 
-    "titulo titulo"
-    "contactoUno contactoDos"
-    "contactoTres contactoDos";
-    justify-items: stretch;
-    align-items: center;
-    box-sizing: border-box;
-}    
-.datos{
-    grid-area: contactoUno;
-    text-align: center;
+/*para contacto*/
+.content{
+    max-width: 100%;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(33, 3, 145, 0.3);
+    height: 500px;
+}
+.contact-form {
+    opacity: 80%;
+        form{
+            padding-top: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 10px;
+            max-height: 600px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 70px 70px 70px 50px 120px 30px 70px;
+            grid-template-areas: 
+            "nombre nuestrosDatos"
+            "email nuestrosDatos"
+            "telefono nuestrosDatos"
+            "tipo imagenContacto"
+            "consulta imagenContacto"
+            "novedades imagenContacto"
+            "botones imagenContacto";
+            text-align: center;
+        }
+        form label{
+            display: block;  
+        }
+        form button,
+        form input,
+        form textarea {
+            width: 50%;
+            padding: .7em;
+            border: none;
+            background: none;
+            outline: 0;
+            color: black;
+            border-bottom: 1px solid #1800a3ef;
+        }
+}
+.nombre{
+    grid-area: nombre;
+}
+.email{
+    grid-area: email;
+}
+.telefono{
+    grid-area: telefono;
+}
+.tipo{
+    grid-area: tipo;
+}
+.consulta{
+    grid-area: consulta;
+}
+.checkbox{
+    grid-area: novedades;
+}
+.botones{
+    grid-area: botones;
+}
+.nuestrosDatos{
+    grid-area: nuestrosDatos;
+    background: $base-background-color;
+}
+.infoMail{
+    grid-area: infoMail;
+    background: $base-background-color;
+}
+.infoTel{
+    grid-area: infotel;
+    background: $base-background-color;
 }
 .imagenContacto{
-    grid-area: contactoTres;
-    text-align: center;
-}
-.formulario{
-    grid-area: contactoDos;
+    grid-area: imagenContacto;
+    background: $base-background-color;
 }

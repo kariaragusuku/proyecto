@@ -18,36 +18,26 @@ body{
     font-size: $base-font-family;
     background-color: $base-background-color;
     @include sizes(100%,100%);
+    display: block;
 }
 header{
     width: 100%;
-    height: 80px;
-    overflow: hidden;
+    height: 50px;
     background: rgb(0, 0, 85);
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: flex-end;
+    overflow: hidden;
 }
 /*logo del lado izquierdo*/
 header .logo{
     color: rgb(255, 255, 255);
     font-size: 30px;
-    line-height: 100px;
     flex-direction: row;
     float: left;
-    justify-content: center;
-}
-/*botones del lado derecho*/
-header nav{
-    line-height: 80px;
-    display: flex;
-    flex-direction: row-reverse;
-}
-/*para sombra de botones*/
-header nav a:hover{
-    background: rgb(12, 165, 236);
-    border-radius: 50px;
+        img{
+            @include sizes(50px,50px)
+        }
 }
 main{
     width: 100%;
@@ -55,39 +45,76 @@ main{
     font-family: $base-font-family;
     margin: auto;
 }
+/*menu responsive*/
+#btn-menu{
+    display: none;
+}
+header {
+    label{
+        display: none;
+        @include sizes(30px,30px);
+        padding: 10px;
+        border-right: 1px solid #fff;
+    }   
+    img{
+        @include sizes(30px,30px);  
+    }
+    label:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px 0px;
+        padding-top: 10px;
+    }
+}
+.menu{
+    ul{
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    li a{
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        font-family: $base-font-family;
+        font-size: $button-font-size;
+        color: #FFF;
+        border-right: 1px solid #fff;
+        line-height: normal;
+    }
+        li:hover{
+        background: rgb(12, 165, 236);
+    }
+}
+@media (max-width: 768px) {
+    header label {
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        background: rgb(0, 0, 85);
+        width: 30%;
+        margin-left: -70%;
+        transition: all 1s;
+        display: block;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li{
+        border-top: 1px solid #fff;
+    }
+}
+#btn-menu:checked ~ .menu{
+    margin: 0;
+}
 /*para centrar*/
 .wrapper{
     width: 100%;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
-}
-/*botones del nav*/
-.button{
-    font-family: $base-font-family;
-    font-size: $button-font-size;
-    background: rgba(47, 113, 255, 0.658);
-    color: #FFF;
-    display: inline-block;
-    padding: 10px;
-    width: 100px;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0px 3px 0px rgb(4, 4, 173);
-    border-radius: 50px;
-    line-height: normal;
-}
-.button:hover{
-    box-shadow: 0px 0px 0px;
-    padding-top: 10px;
-}
-/*lista sin viñeta y horizontal*/
-ul{
-    list-style-type: none;
-        li{
-            display: inline-block;
-            position: relative;
-        }
 }
 /*contenido dentro del video*/
 .textoIndex{
@@ -114,16 +141,6 @@ ul{
 .container-fluid{
     margin: 0;
     padding: 0;
-}
-/*modificar después*/
-@media (max-width: 600px){
-
-}
-@media (min-width: 600px) and (max-width: 1024px){
-    .contact-form{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
 }
 /*video*/
 .videoIndex{
@@ -159,7 +176,7 @@ ul{
             object-fit: cover;
             opacity: 25%;
             display: flex;
-}   
+        }   
 } 
 /*contacto whatsapp*/
 .contactoWp{
@@ -194,6 +211,13 @@ ul{
         }
         ul li a:hover{
             filter: none; 
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+        display: inline-block;
+        position: relative;
         }
 }
 .footerRedes :hover{
@@ -338,4 +362,9 @@ ul{
 .imagenContacto{
     grid-area: imagenContacto;
     background: $base-background-color;
+}
+.imagenContacto{
+    img{
+        @include sizes(200px, 200px);
+    }
 }
